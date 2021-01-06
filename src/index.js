@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createStore } from "redux";
-import { Provider } from "redux";
-import rootReducer from "./modules";
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import rootReducer from './modules';
 
 // store를 만듭니다.
 const store = createStore(rootReducer);
@@ -16,8 +16,7 @@ const store = createStore(rootReducer);
 ReactDOM.render(
   <Provider store={store}>
     <App />
-  </Provider>
-  
+  </Provider>,  
   document.getElementById('root')
 );
 
