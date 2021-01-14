@@ -6,9 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './modules';
+import { composeWithDevTools } from 'redux-devtools-extension'; // redux 개발자 도구
 
 // store를 만듭니다.
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, composeWithDevTools());
+// composeWithDevTools를 사용하여 리덕스 개발자 도구 활성화
 
 // store의 상태를 확인해 봅니다.
 // console.log(store.getState());
